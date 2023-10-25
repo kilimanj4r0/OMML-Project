@@ -1,0 +1,3 @@
+[submodule "external/accelerated_clipping"]
+	path = external/accelerated_clipping
+	url = https://github.com/eduardgorbunov/accelerated_clipping.git
