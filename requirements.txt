@@ -3,3 +3,8 @@ scipy
 matplotlib
 scikit-learn
 ipykernel
+wandb
+torch
+evaluate
+datasets
+transformers

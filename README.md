@@ -1,12 +1,41 @@
-Optimization Methods in Machine Learning, Fall 2023, Innopolis University
+**Vladimir Makharev B20-AI-01, Danil Andreev B20-AI-01**
 
-**Vladimir Makharev B20-AI, Danil Andreev B20-AI**
+---
 
 # [Stochastic Optimization with Heavy-Tailed Noise via Accelerated Gradient Clipping](https://proceedings.nips.cc/paper_files/paper/2020/file/abd1c782880cc59759f4112fda0b8f98-Paper.pdf)
 
 ## Abstract
 
 In this paper, we propose a new accelerated stochastic first-order method called clipped-SSTM for smooth convex stochastic optimization with heavy-tailed distributed noise in stochastic gradients and derive the first high-probability complexity bounds for this method closing the gap in the theory of stochastic optimization with heavy-tailed noise. Our method is based on a special variant of accelerated Stochastic Gradient Descent (SGD) and clipping of stochastic gradients. We extend our method to the strongly convex case and prove new complexity bounds that outperform state-of-the-art results in this case. Finally, we extend our proof technique and derive the first non-trivial high-probability complexity bounds for SGD with clipping without light-tails assumption on the noise.
+
+---
+## Experiments
+
+Python 3.10+ is required. First step:
+
+```bash
+git clone https://github.com/kilimanj4r0/OMML-Project.git
+pip install -r requirements.txt
+```
+
+### Ours
+
+Results of experiments are available at [our WandB dashboard](https://wandb.ai/makharev/iu-omml). We tracked training loss, validation accuracy and evaluation accuracy. Example:
+
+![Trajectories of SGD, clipped-SGD, AdamW and clipped-AdamW applied in optimization of BERT fine-tuning on Yelp reviews dataset.](assets/train_loss_adam_sgd.png)
+
+We choice NLP domain and experimented with `SGD` (Nesterov, with momentum) and `AdamW` optimization methods by fine-tuning pretrained BERT model on [Yelp reviews](https://huggingface.co/datasets/yelp_review_full) classification dataset. PyTorch and HuggingFace libraries (`transformers`, `datasets`, `evaluate`) were used to build train-validation-evaluation pipeline. All details are in the Jupyter notebook [bert-finetuning-experiments.ipynb](/notebooks/bert-finetuning-experiments.ipynb).
+
+To reproduce experiments and track results into WandB:
+
+1. Login into WandB using command `wandb login`
+2. Substitute `entity` and `project` parameters of yours WandB account.
+3. Choose appropriate optimizer in the notebook.
+4. Decide to turn on / off the clipping by uncommenting / commenting the `clip_grad_norm_` in training loop.
+
+### Authors'
+
+
 
 ## Problem
 
