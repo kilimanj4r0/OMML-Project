@@ -11,11 +11,23 @@ In this paper, we propose a new accelerated stochastic first-order method called
 ---
 ## Experiments
 
-Python 3.10+ is required. First step:
+### Setup
 
+Python 3.10+ is required.
+
+1. Clone the repository
 ```bash
-git clone https://github.com/kilimanj4r0/OMML-Project.git
+git clone --recurse-submodules https://github.com/kilimanj4r0/OMML-Project.git
+```
+
+2. Install the requirements
+```bash
 pip install -r requirements.txt
+```
+
+3. Prepare submodule
+```bash
+source setup.bash
 ```
 
 ### Ours
@@ -35,7 +47,7 @@ To reproduce experiments and track results into WandB:
 
 ### Authors'
 
-
+To get familiar with experiments from the paper run them use the notebooks located in `external/accelerated_clipping/`.
 
 ## Problem
 
