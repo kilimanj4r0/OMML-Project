@@ -1,0 +1,15 @@
+\begin{frame}
+\frametitle{Fine-tuning BERT on Yelp reviews}
+We built a pipeline to fine-tune a pretrained model based on \href{https://huggingface.co/docs/transformers/training#train-in-native-pytorch}{\color{blue}HuggingFace docs}
+\begin{itemize}
+    \item Pretrained BERT (\texttt{bert-base-cased}) model
+    \item \href{https://huggingface.co/datasets/yelp_review_full}{\color{blue}Yelp reviews} dataset of text reviews and score between 1 and 5
+    \item Dataset splits: \texttt{(train, val, eval) = (1000, 300, 500)}
+\end{itemize}
+\only<2->{Hyperparameters:}
+\begin{itemize}
+    \item<2-> \texttt{batch\_size = 8}
+    \item<2-> \texttt{num\_epochs = 3}
+    \item<2-> \texttt{learning\_rate = 0.00005}
+\end{itemize}
+\end{frame}

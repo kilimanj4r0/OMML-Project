@@ -1,0 +1,70 @@
+\documentclass{beamer}
+% \usetheme{Darmstadt}
+% \usetheme{Antibes}
+\usetheme{Berlin}
+\usepackage{svg}
+% \usepackage{graphicx} % Required for inserting images
+
+\definecolor{IUgreen}{RGB}{64, 186, 33}
+\definecolor{IUgreylight}{RGB}{237, 241, 245}
+\definecolor{IUgreytext}{RGB}{51, 51, 51}
+\definecolor{IUgrey}{RGB}{145, 163, 176}
+
+\setbeamercolor{palette primary}{bg=IUgreen,fg=white}
+\setbeamercolor{palette secondary}{bg=IUgreylight,fg=IUgreytext}
+\setbeamercolor{palette tertiary}{bg=IUgreen,fg=white}
+\setbeamercolor{palette quaternary}{bg=IUgreen,fg=white}
+\setbeamercolor{structure}{fg=IUgreen} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=IUgreen} % TOC sections
+% \setbeamercolor{navigation symbols}{fg=IUgreytext}
+% \setbeamercolor{navigation symbols dimmed}{fg=IUgrey}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+\title{Accelerated Gradient Clipping}
+\subtitle{Optimization Methods in Machine Learning}
+\author{Danil Andreev \and Vladimir Makharev}
+\institute{Innopolis University}
+\date{Fall 2023}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{figure}[htpb]
+        \begin{center}
+            \includesvg[height=0.06\linewidth]{pics/iu_logo_green_eng.svg}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\section{Gradient Clipping}
+\include{slides/introduction_2}
+\include{slides/introduction_1}
+
+\section{Paper Experiments}
+\include{slides/paper_experiments_1}
+\include{slides/paper_experiments_2}
+\include{slides/paper_experiments_3}
+
+\section{Experiments}
+\include{slides/experiments_1}
+\include{slides/experiments_2}
+\include{slides/experiments_3}
+\include{slides/experiments_4}
+\include{slides/experiments_5}
+\include{slides/experiments_6}
+\include{slides/experiments_7}
+\include{slides/experiments_8}
+
+\section{Conclusion}
+\include{slides/conclusion}
+
+\section{Appendix}
+\include{slides/appendix_1}
+\include{slides/appendix_2}
+\include{slides/appendix_3}
+
+\end{document}

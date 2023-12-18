@@ -1,0 +1,14 @@
+\begin{frame}
+\frametitle{Experiments with BERT fine-tuning on optimizers}
+We experimented with \href{https://pytorch.org/docs/stable/optim.html}{\color{blue}PyTorch optimizers} SGD and AdamW. For clipping, \href{https://github.com/pytorch/pytorch/blob/0597eb56c29b3986aa412161b1d3e82b6b36e8d5/torch/nn/utils/clip_grad.py#L12}{\color{blue}\texttt{clip\_grad\_norm\_}} function with \texttt{max\_norm}\(\ =\lambda=1.0\) was used. We used \href{https://wandb.ai/makharev/iu-omml}{\color{blue}WandD} to track loss and accuracy. For loss \texttt{smoothing = 0.9} was applied. We denoted momentum as \(\mu\). 
+\begin{itemize}
+    \item \texttt{SGD}
+    \item \texttt{clipped-SGD}
+    \item \texttt{SGD} (\(\mu=0.9\))
+    \item \texttt{clipped-SGD} (\(\mu=0.9\))
+    \item \texttt{SGD-Nesterov} (\(\mu=0.9\))
+    \item \texttt{clipped-SGD-Nesterov} (\(\mu=0.9\))
+    \item \texttt{AdamW}
+    \item \texttt{clipped-AdamW}
+\end{itemize}
+\end{frame}

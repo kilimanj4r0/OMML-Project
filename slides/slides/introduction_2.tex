@@ -1,0 +1,12 @@
+\begin{frame}
+    \frametitle{Gradient clipping}
+    $$\text{clip}\left(\nabla f(x, \xi), \lambda \right) = \min \left\{1, \frac{\lambda}{||\nabla f(x, \xi)||} \right\} \nabla f(x, \xi)$$
+
+    \begin{itemize}
+        \item $\nabla f(x, \xi)$ - stochastic gradient of the objective function at point $x$
+        \item $\lambda$ - clipping parameter, larger $\lambda$ means less aggressive clipping
+        \item $||\nabla f(x, \xi)||$ - Euclidean norm of the gradient vector
+    \end{itemize}
+
+    As a result, the gradient vector is projected on the Euclidean ball with radius $\lambda$ with center at the origin.
+\end{frame}
